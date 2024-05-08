@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #0c4a6e;
-  --accent-color: #e5e5e5;
+  --secondary-bg-color: #dfe3e9;
+  --accent-color: orange;
 }
 
 body {
@@ -14,8 +15,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 4fr;
-  /* margin: auto;
-  width: 70%; */
 }
 
 .container div {
@@ -48,20 +47,22 @@ nav {
 
 /* HEADER */
 .main-header {
+  position: relative;
   background-color: white;
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: 2rem;
+  padding: 0 2rem;
   align-items: center;
+  box-shadow: 1px 8px 18px -18px #222;
 }
 
 input[type="search"] {
   border-style: none;
   border-radius: 15px;
   width: 80%;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-bg-color);
   line-height: 1.5rem;
 }
 
@@ -82,17 +83,18 @@ input[type="search"] {
 
 .greeting {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 10fr;
   grid-template-rows: 1fr;
   align-items: center;
 }
 
 .icon {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   border-style: none;
-  border-radius: 25px;
+  border-radius: 50px;
   background-color: orange;
+  margin: 1rem;
 }
 
 .user {
@@ -103,26 +105,30 @@ input[type="search"] {
   font-size: 14px;
 }
 
-.header p {
+header p {
   margin: 0;
-  padding: 0;
+  padding: 2px;
 }
 
 /* MAIN */
 main {
-  padding: 1rem;
-  background-color: var(--accent-color);
+  padding: 2rem 1rem;
+  background-color: var(--secondary-bg-color);
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
+  gap: 25px;
 }
 
 .news {
   padding: 10px;
   display: grid;
-  grid-template-rows: 1fr 3fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row;
 }
 
 .cards {
@@ -135,12 +141,14 @@ main {
 }
 
 .card {
-  height: 150px;
+  box-sizing: border-box;
+  height: 200px;
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
   border-style: none;
   font-size: 16px;
+  box-shadow: 4px 4px 8px -8px #222;
 }
 
 .card header {
@@ -153,8 +161,12 @@ main {
   font-weight: normal;
 }
 
+.projects .card {
+  border-left: 10px solid var(--accent-color)
+}
+
 .news .card {
-  height: 200px;
+  height: 300px;
 }
 
 
