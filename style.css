@@ -9,6 +9,24 @@ body {
   margin: 0;
 }
 
+img {
+  height: 25px;
+}
+
+nav img {
+  filter: invert(100%);
+  vertical-align: text-bottom;
+  margin-right: 20px;
+}
+
+.card-actions {
+  justify-self: end;
+
+  img {
+    margin: 0 10px;
+  }
+}
+
 .container {
   text-align: left;
   max-height: 100vh;
@@ -131,7 +149,7 @@ main {
   grid-auto-flow: row;
 }
 
-.cards {
+.card-container {
   display: grid;
   padding: 10px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -149,6 +167,13 @@ main {
   border-style: none;
   font-size: 16px;
   box-shadow: 4px 4px 8px -8px #222;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+}
+
+.card-content {
+  max-height: 175px;
+  overflow: hidden;
 }
 
 .card header {
